@@ -1,0 +1,241 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+    <head>
+            <meta charset="UTF-8"\>
+            <title>Kurczaczki - Kontakt</title>
+            <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+            <style>
+                body{
+                        background-image: url(img/christmas/bgnew.png);
+                        overflow-x:hidden ;
+                }
+                    #pojemnik{
+                            color:white;
+                            background-color:rgb(94, 94, 186);
+                            width: 1300px;
+                            height: 700px;
+                            margin-left:auto;
+		        margin-right:auto;
+                        text-align: left;
+                        padding: 15px;
+                        font-family: 'Poppins', sans-serif;
+                        padding-top: 40px;
+                        border: solid #ffffff 0px;
+                        border-radius: 20px;
+                        overflow: hidden;
+                        box-shadow: 0px 10px 26px 0 rgb(0,0,0);
+                    }
+                    #pasek_gorny{
+                        color:dimgray;
+                        background-color:lightskyblue;
+                        margin-left:auto;
+                        margin-right:auto;
+                        width: 1150px;
+                        height: 50px;
+                        border:solid #ffffff 0px;
+                        border-radius: 100px;
+                        overflow: hidden;
+                        margin-bottom: 20px;
+                        box-shadow: 0px 8px 24px 0 rgb(0,0,0);
+                    }
+                    .pasek{
+                        color:dimgray;
+                        text-align:center;
+                        float:left;
+                        padding-left: 78px;
+                        padding-top: 14px;
+                        font-size: 14px;
+                    }
+                    a{
+                        color:navy;
+                        text-decoration: none;
+                        transition: color 0.3s;
+                    }
+                    #Logo{
+                        padding: 30px;
+                        float: left;
+                        margin-left:15px;
+                        margin-top:130px;
+                    }
+                    #Logo img{
+                        border: solid #ffffff 3px;
+                        border-radius: 15px;
+                        overflow: hidden;
+                        transform: scale(1);
+                        transition: transform 0.3s;
+                        box-shadow: 1px 10px 24px 0 rgb(0,0,0);
+                    }
+                    #Logo img:hover{
+                        transform: scale(1.2);
+                        border: solid rgba(0,0,153);
+                    }
+                    #tekst{
+                        background-color:cadetblue;
+                        color:gainsboro;
+                        padding-left:250px;
+                        height:620px;
+                        border: solid #ffffff 0px;
+                        border-radius: 10px;
+                        box-shadow: 0px 6px 20px 0 rgb(0,0,0);
+                    }
+                    a:hover{
+                        color:red;
+                    }
+                    .form_label{
+                        text-align: center;
+                        color:antiquewhite;
+                    }
+                    .form_input_email{
+                        background-color: rosybrown;
+                        color:white;
+                        border: solid #666ebd 2px;
+                        border-radius:10px;
+                        width: 300px;
+                        height: 40px;
+                        font-family: 'Poppins', sans-serif;
+                        box-shadow: 0px 8px 24px 0 rgb(73, 71, 71);
+                    }
+                    .form_input_msg{
+                        resize: none;
+                        width: 300px;
+                        height:240px;
+                        font-size: 20px;
+                        border:solid #666ebd 2px;
+                        background: rosybrown;
+                        border-radius: 10px;
+                        font-family: 'Poppins', sans-serif;
+                        color:white;
+                        box-shadow: 0px 8px 24px 0 rgb(73, 71, 71);
+                        margin-bottom: 20px;
+                    }
+                    .form_action_send_button{
+                        color:white;
+                        border:solid #ffffff 0px;
+                        border-radius: 10px;
+                        overflow: hidden;
+                        box-shadow: 0px 8px 24px 0 rgb(73, 71, 71);
+                        width:100px;
+                        height: 40px;
+                        font-size:20px;
+                        transform:scale(1);
+                        transition: transform 0.3s;
+                        background: rgb(56,168,170);
+                        background: linear-gradient(45deg, rgba(56,168,170,1) 0%, rgba(115,79,189,1) 100%);
+                    }
+                    .form_action_send_button:hover{
+                        transform:scale(1.2);
+                        cursor:pointer;
+                        box-shadow: 0px 9px 25px 0 rgb(0,0,0);
+                    }
+                    #oops_message_info{
+                        border: solid #ffffff 2px;
+                        border-radius: 20px;
+                        box-shadow: 0px 8px 10px 0 rgb(84, 81, 81);
+                    }
+                    @keyframes fall{
+                        from {top: 0%;}
+                        to {top: 100%;}
+                    }
+                    @keyframes rotate {
+                        from{transform:rotate(0deg);}
+                        to{transform: rotate(360deg);}
+                    }
+                    @keyframes left_to_right {
+                        from{left:0%;}
+                        to{left:100%;}
+                    }
+                    .flake{
+                        position:absolute;
+                        top: 0px;
+                        animation:fall 10s 0s 1 linear forwards;
+                        padding: 0 50px;
+                    }
+
+                    .flake img{
+                        animation: rotate 6s 0s infinite linear forwards,
+                        left_to_right 2s 0s infinite ease-in-out alternate;
+                        position:absolute;
+                    }
+                    #santa_container{
+                        display: flex;
+                        align-items: center;
+                        position: absolute;
+                        transform: rotateY(180deg);
+                    }
+                    #santa_container.flipped_santa{
+                        transform: rotateY(0deg);
+                    }
+
+                    .renifery{
+                        position: relative;
+                        padding: 20px 0;
+                        top:-20px;
+                        animation: move-up-down 2s 0s infinite alternate ease-in-out;
+                    }
+                    .renifery:nth-of-type(2){
+                        animation-delay: 1s;
+                    }
+                    .renifery:nth-of-type(3){
+                        animation-delay: 3s;
+                    }
+                    @keyframes move-up-down {
+                        from {top:-20px;}
+                        to {top:20px;}
+                    }
+            </style>
+    </head>
+    <body>
+        
+        <div id="pojemnik">
+            <script src="js/snow.js"></script>
+                <div id="pasek_gorny">
+                        <div class="pasek">
+                                <a href="sociale.html"><b>Nasze Sociale</b></a>
+                        </div>
+                        <div class="pasek">
+                                <a href="jak_dol.html"><b>Jak Dołączyć?</b></a>
+                        </div>
+                        <div class="pasek">
+                                <a href="admin.html"><b>Nasza administracja</b></a>
+                        </div>
+                        <div class="pasek">
+                                <a href="galeria.html"><b>Nasze budowle</b></a>
+                        </div>
+                        <div class="pasek">
+                                <a href="eventy.html"><b>Nasze Eventy</b></a>
+                        </div>
+                        <div class="pasek">
+                            <a href="kontakt.html"><b>Skontaktuj się</b></a>
+                        </div>
+                </div>
+                <div id="Logo">
+                        <a href="index.html"><img src="img/logo.jpg"></a>
+                </div>
+                <div id="tekst">
+                        <br><center>
+                        <form action="https://formsubmit.io/send/lukubuku1@onet.pl" method="POST">
+                            <input name="_redirect" type="hidden" id="name" value="kurczaczki69.prv.pl/dziekujemy.html">
+                            <input name="_formsubmit_id" type="text" style="display:none">
+                            <h3><label class="form_label" for="mail">Twój E-mail:</label></h3>
+                            <input class="form_input_email" id="mail" name="mail" type="mail" placeholder="Wpisz swój adres e-mail">
+                            <br>
+                            <h3><label class="form_label" for="form_input_msg">Twoja wiadomość:</label></h3>
+                            <textarea class="form_input_msg" name="msg" rows="10" placeholder="Wpisz swoją wiadomość!"></textarea>
+                            <br>
+                                <input class="form_action_send_button" value="WYŚLIJ" type="submit"></button>
+                        </form>
+                        <p id="oops_message_info">Jeśli wyszedł błąd typu : oops something went wrong, to wiadomość <br>
+                            i tak zostanie wysłana :D, poprostu tu wróć<br> 
+                            i dalej przeglądaj!</p></center>
+                        <br><br>
+                        <h6>2022 by Łukasz Soja</h6>
+                        <br><br>
+                </div>
+        </div>
+
+
+    </body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+    <head>
+            <meta charset="UTF-8"\>
+            <title>Kurczaczki - Nasze budowle</title>
+            <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+            <meta keywords="Kurczaczki,kurczak,serwer,mc,minecraft,gra,game,server,creative,kreatywny"/>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="gallery.css">
+        <style>
+                @keyframes fall{
+                        from {top: 0%;}
+                        to {top: 100%;}
+                    }
+                    @keyframes rotate {
+                        from{transform:rotate(0deg);}
+                        to{transform: rotate(360deg);}
+                    }
+                    @keyframes left_to_right {
+                        from{left:0%;}
+                        to{left:100%;}
+                    }
+                    .flake{
+                        position:absolute;
+                        top: 0px;
+                        animation:fall 10s 0s 1 linear forwards;
+                        padding: 0 50px;
+                    }
+
+                    .flake img{
+                        animation: rotate 6s 0s infinite linear forwards,
+                        left_to_right 2s 0s infinite ease-in-out alternate;
+                        position:absolute;
+                    }
+                    #santa_container{
+                        display: flex;
+                        align-items: center;
+                        position: absolute;
+                        transform: rotateY(180deg);
+                        overflow-y: hidden;
+                    }
+                    #santa_container.flipped_santa{
+                        transform: rotateY(0deg);
+                    }
+
+                    .renifery{
+                        position: relative;
+                        padding: 20px 0;
+                        top:-20px;
+                        animation: move-up-down 2s 0s infinite alternate ease-in-out;
+                    }
+                    .renifery:nth-of-type(2){
+                        animation-delay: 1s;
+                    }
+                    .renifery:nth-of-type(3){
+                        animation-delay: 3s;
+                    }
+                    @keyframes move-up-down {
+                        from {top:-20px;}
+                        to {top:20px;}
+                    }
+        </style>
+    </head>
+    <body>
+        
+        <div id="pojemnik">
+                <script src="js/snow.js"></script>
+                <div id="pasek_gorny">
+                        <div class="pasek">
+                                <a href="sociale.html"class="pasek-a"><b>Nasze Sociale</b></a>
+                        </div>
+                        <div class="pasek">
+                                <a href="jak_dol.html"class="pasek-a"><b>Jak Dołączyć?</b></a>
+                        </div>
+                        <div class="pasek">
+                                <a href="admin.html" class="pasek-a"><b>Nasza administracja</b></a>
+                        </div>
+                        <div class="pasek">
+                                <a href="galeria.html"class="pasek-a"><b>Nasze budowle</b></a>
+                        </div>
+                        <div class="pasek">
+                                <a href="eventy.html"class="pasek-a"><b>Nasze Eventy</b></a>
+                        </div>
+                        <div class="pasek">
+                                <a href="kontakt.html" class="pasek-a"><b>Skontaktuj się</b></a>
+                        </div>
+                </div>
+                <div id="Logo">
+                        <a href="index.html"><img src="img/logo.jpg"></a>
+                </div>
+                <ul class="gallery">
+                    <li class="thumbnail"><img src="img/1top.png"></li>
+                    <li class="thumbnail"><img src="img/2.png"></li>
+                    <li class="thumbnail"><img src="img/3.png"></li>
+                    <li class="thumbnail"><img src="img/4.png"></li>
+                    <li class="thumbnail"><img src="img/5.png"></li>
+                    <li class="thumbnail"><img src="img/6.png"></li>
+                    <li class="thumbnail"><img src="img/7.png"></li>
+                    <li class="thumbnail"><img src="img/8.png"></li>
+                    <li class="thumbnail"><img src="img/9.png"></li>
+                    <li class="thumbnail"><img src="img/10.png"></li>
+                    <li class="thumbnail"><img src="img/11.png"></li>
+                    <li class="thumbnail"><img src="img/12.png"></li>
+                    <li class="thumbnail"><img src="img/13.png"></li>
+                    <li class="thumbnail"><img src="img/14.png"></li>
+                    <li class="thumbnail"><img src="img/15.png"></li>
+                    <li class="thumbnail"><img src="img/16.png"></li>
+                </ul>
+        </div>
+            <script src="app.js"></script>
+    </body>
+</html>
