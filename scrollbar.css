@@ -1,0 +1,27 @@
+html::-webkit-scrollbar{
+    width: 0.69vw;
+}
+
+html::-webkit-scrollbar-thumb{
+    background-color: cornflowerblue;
+    border:solid #fff 0.01vw;
+    border-radius: 1vw;
+    overflow: hidden;
+    padding: 0.1vw;
+}
+
+html::-webkit-scrollbar-track{
+    background-color: cadetblue;
+    border:solid #fff 0.01vw;
+    border-radius: 1vw;
+    overflow: hidden;
+    padding: 0.1vw;
+}
+
+html::-webkit-scrollbar-track:hover{
+    background-color: rgb(113, 162, 163);
+}
+
+html::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(126, 162, 227);
+}
